@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewel Fashion - Contact</title>
+    <link rel="stylesheet" href="contactcss.css">
+</head>
+<body>
+    <main>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jewel Fashion and clotheirs.</p>
+            <div class="contact-buttons">
+                <a href="tel:09130597205" class="contact-button call">Call Us</a>
+                <a href="jehujahswill@gmail.com" class="contact-button email">Email Us</a>
+                <a href="https://wa.me/09130597205" class="contact-button whatsapp">WhatsApp</a>
+                <a href="https://t.me/Jehuvibe" class="contact-button telegram">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("4uJbFM1EelEGGt5Bv"); // Replace YOUR_PUBLIC_KEY with your actual Public Key
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            emailjs.sendForm('Jewel Fashion Home', 'template_clddndp', this)
+                .then(function(response) {
+                    alert('Message sent successfully from Jewel Fashion!');
+                }, function(error) {
+                    console.error('Failed to send message:', error);
+                    alert('Failed to send message. Check the console for more details.');
+                });
+        });
+    </script>
+</body>
+</html>

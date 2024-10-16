@@ -1,0 +1,70 @@
+/* General About Page Styles */
+#about {
+    padding: 40px 20px;
+    background-color:whitesmoke;
+    color:blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.about-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px blue;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 30px;
+    color: rgba(0, 0, 255, 0.822); /* Jewel's Gold color */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: rgba(0, 0, 255, 0.596);
+}
+
+/* Subheading Styles */
+h2 {
+    font-size: 20px;
+    color: rgba(0, 0, 255, 0.74); /* Jewel's Gold color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: rgba(0, 0, 255, 0.582);
+}
+
+ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    #about {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    p, ul li {
+        font-size: 20px;
+    }
+}
